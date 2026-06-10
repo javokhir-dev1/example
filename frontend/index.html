@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Auth System - Ro'yxatdan o'tish va kirish tizimi">
+  <title>Auth System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Auth Container (Login / Register) -->
+  <div class="container" id="authContainer">
+    <div class="card">
+      <div class="card-header">
+        <h1 id="formTitle">Kirish</h1>
+        <p id="formSubtitle">Tizimga kirish uchun ma'lumotlaringizni kiriting</p>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm">
+        <div class="input-group">
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" placeholder="email@example.com" required>
+        </div>
+        <div class="input-group">
+          <label for="loginPassword">Parol</label>
+          <input type="password" id="loginPassword" placeholder="••••••" required>
+        </div>
+        <button type="submit" class="btn" id="loginBtn">Kirish</button>
+      </form>
+
+      <!-- Register Form -->
+      <form id="registerForm" class="hidden">
+        <div class="input-group">
+          <label for="regUsername">Username</label>
+          <input type="text" id="regUsername" placeholder="foydalanuvchi_nomi" required>
+        </div>
+        <div class="input-group">
+          <label for="regEmail">Email</label>
+          <input type="email" id="regEmail" placeholder="email@example.com" required>
+        </div>
+        <div class="input-group">
+          <label for="regPassword">Parol</label>
+          <input type="password" id="regPassword" placeholder="Kamida 6 ta belgi" required>
+        </div>
+        <button type="submit" class="btn" id="regBtn">Ro'yxatdan o'tish</button>
+      </form>
+
+      <!-- Error / Success messages -->
+      <div id="message" class="message hidden"></div>
+
+      <!-- Toggle between login/register -->
+      <div class="toggle">
+        <span id="toggleText">Akkauntingiz yo'qmi?</span>
+        <a href="#" id="toggleLink">Ro'yxatdan o'ting</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Profile Container (after login) -->
+  <div class="container hidden" id="profileContainer">
+    <div class="card">
+      <div class="card-header">
+        <h1>Profil</h1>
+        <p>Xush kelibsiz!</p>
+      </div>
+
+      <div class="profile-info">
+        <div class="profile-row">
+          <span class="label">ID</span>
+          <span class="value" id="profileId">—</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Username</span>
+          <span class="value" id="profileUsername">—</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Email</span>
+          <span class="value" id="profileEmail">—</span>
+        </div>
+        <div class="profile-row">
+          <span class="label">Ro'yxatdan o'tgan</span>
+          <span class="value" id="profileDate">—</span>
+        </div>
+      </div>
+
+      <button class="btn btn-outline" id="logoutBtn">Chiqish</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

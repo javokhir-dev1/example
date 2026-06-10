@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sodda autentifikatsiya tizimi">
+    <title>Auth — Kirish</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Auth sahifa -->
+    <div class="container" id="authContainer">
+        <div class="card">
+            <h1 class="title" id="formTitle">Kirish</h1>
+            <p class="subtitle" id="formSubtitle">Email va parolingizni kiriting</p>
+
+            <!-- Login Form -->
+            <form id="loginForm" class="form">
+                <div class="field">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" placeholder="email@example.com" required>
+                </div>
+                <div class="field">
+                    <label for="loginPassword">Parol</label>
+                    <input type="password" id="loginPassword" placeholder="••••••" required>
+                </div>
+                <button type="submit" class="btn" id="loginBtn">Kirish</button>
+            </form>
+
+            <!-- Register Form -->
+            <form id="registerForm" class="form hidden">
+                <div class="field">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" placeholder="email@example.com" required>
+                </div>
+                <div class="field">
+                    <label for="regPassword">Parol</label>
+                    <input type="password" id="regPassword" placeholder="Kamida 6 ta belgi" required>
+                </div>
+                <button type="submit" class="btn" id="regBtn">Ro'yxatdan o'tish</button>
+            </form>
+
+            <!-- Xabarlar -->
+            <div id="message" class="msg hidden"></div>
+
+            <!-- Toggle -->
+            <p class="switch">
+                <span id="switchText">Akkauntingiz yo'qmi?</span>
+                <a href="#" id="switchLink">Ro'yxatdan o'ting</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Dashboard sahifa -->
+    <div class="container hidden" id="dashboardContainer">
+        <div class="card">
+            <h1 class="title">Profil</h1>
+            <p class="subtitle" id="welcomeMsg">Xush kelibsiz!</p>
+
+            <div class="info">
+                <div class="info-row">
+                    <span class="info-label">ID</span>
+                    <span class="info-value" id="userId">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Email</span>
+                    <span class="info-value" id="userEmail">—</span>
+                </div>
+                <div class="info-row">
+                    <span class="info-label">Ro'yxatdan o'tgan</span>
+                    <span class="info-value" id="userDate">—</span>
+                </div>
+            </div>
+
+            <!-- Foydalanuvchilar ro'yxati -->
+            <div class="users-section">
+                <h2 class="users-title">Barcha foydalanuvchilar <span class="badge" id="userCount">0</span></h2>
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Email</th>
+                                <th>Sana</th>
+                            </tr>
+                        </thead>
+                        <tbody id="usersBody"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <button class="btn btn-outline" id="logoutBtn">Chiqish</button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

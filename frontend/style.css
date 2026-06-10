@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0f0f0f;
+  color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- Layout ---- */
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ---- Card ---- */
+
+.card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 32px;
+}
+
+.card-header {
+  margin-bottom: 28px;
+}
+
+.card-header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.card-header p {
+  font-size: 0.875rem;
+  color: #888;
+}
+
+/* ---- Form ---- */
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #aaa;
+  margin-bottom: 6px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 14px;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-group input::placeholder {
+  color: #555;
+}
+
+.input-group input:focus {
+  border-color: #555;
+}
+
+/* ---- Buttons ---- */
+
+.btn {
+  width: 100%;
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+  margin-top: 4px;
+  transition: opacity 0.2s;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #e0e0e0;
+  border: 1px solid #333;
+  margin-top: 24px;
+}
+
+.btn-outline:hover {
+  border-color: #555;
+  background: #222;
+}
+
+/* ---- Toggle ---- */
+
+.toggle {
+  text-align: center;
+  margin-top: 22px;
+  font-size: 0.825rem;
+  color: #666;
+}
+
+.toggle a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 4px;
+}
+
+.toggle a:hover {
+  text-decoration: underline;
+}
+
+/* ---- Message ---- */
+
+.message {
+  margin-top: 16px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.825rem;
+  line-height: 1.4;
+}
+
+.message.error {
+  background: #2a1215;
+  border: 1px solid #5c2327;
+  color: #f87171;
+}
+
+.message.success {
+  background: #122a1b;
+  border: 1px solid #1e5c2e;
+  color: #4ade80;
+}
+
+/* ---- Profile ---- */
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #2a2a2a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.profile-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #1a1a1a;
+}
+
+.profile-row .label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.profile-row .value {
+  font-size: 0.875rem;
+  color: #e0e0e0;
+  font-weight: 500;
+}
