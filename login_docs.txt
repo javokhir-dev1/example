@@ -1,0 +1,1 @@
+python login_bruteforce.py -u https://sayt.com/api/login -e user@mail.com -p parollar.txt -x "Incorrect" -c 50

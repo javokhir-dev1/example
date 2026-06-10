@@ -9,6 +9,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
+app.set('trust proxy', true); // X-Forwarded-For headerni ishonchli deb qabul qilish
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
